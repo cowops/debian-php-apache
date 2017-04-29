@@ -28,7 +28,7 @@ Example Playbook
 
     - hosts: servers
       roles:
-         - { role: loranger.debian-php-apache, debian.version: wheezy, debian.locale: fr_FR.UTF-8, debian.mirror: ftp.fr.debian.org, php.timezone: "Europe/Paris" }
+         - { role: cowops.debian-php-apache, debian.version: wheezy, debian.locale: fr_FR.UTF-8, debian.mirror: ftp.fr.debian.org, php.timezone: "Europe/Paris" }
 
 Tasks
 -----
