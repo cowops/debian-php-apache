@@ -18,9 +18,12 @@
   apt_repository: repo='deb https://packages.sury.org/php/ {{ debian.version }} main' state=present
 
 - name: install php packages
-  apt: pkg={{ item }} state=latest update_cache=yes
-  with_items:
-    - libapache2-mod-php5
+    apt:
+    name: {{ packages }}
+    state: latest
+  vars:
+    packages:
+      - libapache2-mod-php5
 
 - name: enable php for apache2 module
   apache2_module: state=present name={{ item }}
